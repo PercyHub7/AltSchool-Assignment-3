@@ -1,0 +1,604 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  @font-face {
+    font-family: "LatoFont";
+    src: url("./fonts/Lato-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+main {
+    background: #F5F8FA;
+    width: 100%;
+    height: 150vh;
+    flex-shrink: 0;
+}
+
+/* ****************NAVIGATIOB BAR STYLING***************/
+#header  {
+    display: flex;
+    padding-top: 2%;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 300px;
+    height: inherit;
+    padding-left: 50%;
+}
+
+.nav-links {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    height: inherit;
+}
+
+.nav-links a{
+    color: black;
+}
+
+.nav-links a:nth-child(5) {
+    width: 100px;
+    border: 2px solid #646E7A; 
+    border-radius: 5px;
+    text-align: center;
+}
+
+.line {
+    width: 90%;
+    background: #E0E6EA;
+    margin-left: 8%;
+    margin-right: 2%;
+}
+
+.line img{
+    width: 100%;
+    margin-top: 3%;
+}
+
+/* ******************form page style */
+.container {
+    width: 55.75rem;
+    height: 52.6375rem;
+    flex-shrink: 0;
+    border-radius: 0.375rem;
+    background: #FFF;
+    margin: 0 auto;
+    margin-top: 5.62rem;
+
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05), 0px 15px 35px 0px rgba(43, 64, 78, 0.10);
+    display: flex;
+}
+
+.check-out {
+    margin-left: 3.06rem;
+}
+
+.title h3 {
+    width: 10.0625rem;
+    height: 3.375rem;
+    color: #1D2C3C;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "LatoFont", "Lato";
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 2.56rem;
+    padding-bottom: 1.5rem;
+}
+
+.underline {
+    width: 36.25rem;
+    height: 0.125rem;
+    flex-shrink: 0;
+    background: #F5F7FA;
+}
+
+.basic-infor {
+    display: flex;
+}
+
+.number {
+    margin: 2.06rem 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    flex-shrink: 0;
+
+    border: 2px solid #548BC5;
+    border-radius: 50%;
+    align-items: center;
+    color: #548BC5;
+    display: flex;
+    justify-content: center;
+
+}
+
+.your-basic {
+    align-items: center;
+    margin-left: 0.9rem;
+    width: 13.75rem;
+    height: 2rem;
+    flex-shrink: 0;
+    color: #1D2C3C;
+    font-family: "LatoFont", "Lato";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.01rem;
+    padding-top: 2.06rem;
+    margin-top: 0.26rem;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-around;
+
+
+    >.first-name,
+    .last-name {
+        display: flex;
+        flex-direction: column;
+        margin-left: -3rem;
+        margin-top: -1rem;
+
+        >label {
+            width: 11.6875rem;
+            color: #1D2C3C;
+            font-family: "LatoFont", "Lato";
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 0.44rem;
+        }
+
+        >input {
+            width: 14.1875rem;
+            height: 2.25rem;
+            flex-shrink: 0;
+            border-radius: 0.25rem;
+            background: #EDEFF2;
+            border: none;
+            color: #646E7A;
+            font-family: "LatoFont", "Lato";
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding-left: 0.81rem;
+            margin-bottom: 0.94rem;
+
+        }
+    }
+}
+
+.mail {
+    display: flex;
+    flex-direction: column;
+    margin-right: -3rem;
+
+    >label {
+        color: #1D2C3C;
+        font-family: "LatoFont", "Lato";
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 0.44rem;
+
+
+    }
+
+    >.G-mail {
+        width: 20.125rem;
+        height: 2.25rem;
+        flex-shrink: 0;
+        border-radius: 0.3125rem;
+        background: #EDEFF2;
+        color: #646E7A;
+        font-family: "LatoFont", "Lato";
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: none;
+        padding-left: 0.81rem;
+        margin-bottom: 2.56rem;
+    }
+}
+
+.second-underline {
+    width: 40.25rem;
+    height: 0.125rem;
+    flex-shrink: 0;
+    background: #F5F7FA;
+    margin-left: -2.9rem;
+
+}
+
+
+/* *************payment informatio */
+.your-payment {
+    display: flex;
+
+    >.payment-infor {
+        color: #1D2C3C;
+        font-family: "LatoFont", "Lato";
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.01rem;
+        margin-top: 2.39rem;
+        margin-left: 0.9rem;
+    }
+
+}
+
+.credit-card {
+    display: flex;
+    flex-direction: column;
+
+    >label {
+        width: 11.6875rem;
+        color: #1D2C3C;
+        font-family: "LatoFont", "Lato";
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 0.44rem;
+    }
+
+    >input {
+        width: 30.1875rem;
+        height: 2.25rem;
+        flex-shrink: 0;
+        border: none;
+        border-radius: 0.25rem;
+        background: #EDEFF2;
+        padding-left: 0.81rem;
+        color: #646E7A;
+        font-family: "LatoFont", "Lato";
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 2.56rem;
+    }
+}
+
+.third-underline {
+    width: 40.25rem;
+    height: 0.125rem;
+    flex-shrink: 0;
+    background: #F5F7FA;
+    margin-left: -2.9rem;
+    margin-right: -2.9rem;
+    margin-bottom: 2.44rem;
+}
+
+.Buy-WP {
+    width: 40.1875rem;
+    height: 3.25rem;
+    flex-shrink: 0;
+    border-radius: 0.3125rem;
+    background: #038E7D;
+    color: #FFF;
+    text-align: center;
+    font-family: "LatoFont", "Lato";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.02475rem;
+    width: 30.1875rem;
+    border: none;
+    cursor: pointer;
+    margin-right: -2.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.need-help {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+
+.need-help img {
+    width: 30px;
+    height: 30px;
+    padding-bottom: 2%;
+    padding-right: 10px;
+}
+
+.help {
+    width: 60%;
+    margin-right: 20%;
+    padding-top: 1%;
+}
+
+.powered {
+   
+    margin-left: 11rem;
+    width: 5.75rem;
+        height: 1.25631rem;
+        padding-top: 5%;
+
+}
+
+/* *******FREELANCE */
+.freelance {
+    border-radius: 0rem 0.375rem 0.375rem 0rem;
+    background: #1179BF;
+    width: 19.5rem;
+    height: 52.6375rem;
+    flex-shrink: 0;
+}
+
+footer {
+    margin-top: 2.16rem;
+    padding-bottom: 5%;
+}
+
+footer p {
+    color: #636B6F;
+    text-align: center;
+    font-family: "LatoFont", "Lato";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+footer span {
+    color: #31708F;
+    font-family: "LatoFont", "Lato";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.free {
+    color: #FFF;
+    font-family: "LatoFont", "Lato";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.00063rem;
+    margin-top: 2.62rem;
+    margin-left: 2.88rem;
+    margin-bottom: 1.12rem;
+}
+
+.dollar-div {
+   width: inherit;
+   color: #FFF;
+   padding-left: 15%;
+}
+
+.dollar sup {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.dollar B{
+    font-size: xx-large;
+}
+
+.dollar {
+    font-size: large;
+    font-weight: bold;
+}
+
+.automatic {
+    width: 14.3125rem;
+    color: #FFF;
+    margin-left: 2.88rem;
+    font-family: "LatoFont", "Lato";
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: -0.0005rem;
+    padding-top: 10%;
+}
+
+.client-site {
+    display: flex;
+    flex-direction: row;
+}
+.client-site ul{
+    padding: 8% 0% 10% 25%;
+    line-height: 2em;
+}
+
+.client-site ul li {
+    list-style-image: url(images/Combined\ Shape.png);
+    color: white;
+    margin-bottom: 3%;
+    
+}
+
+.check-box {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-left: 2.88rem;
+}
+
+.content {
+    color: #FFF;
+    font-family: "LatoFont", "Lato";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.0005rem;
+
+}
+
+.check1,
+.check2,
+.check3 {
+    padding-bottom: 1rem;
+}
+
+.text1,
+.text2,
+.text3 {
+    margin-left: 0.69rem;
+    padding-bottom: 1.4rem;
+}
+
+.need {
+    color: #FFF;
+    font-family: "LatoFont", "Lato";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.0005rem;
+    margin-left: 2.88rem;
+    margin-bottom: 2.62rem;
+
+}
+
+.num-20 {
+    color: #FFF;
+    font-family: "LatoFont", "Lato";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.0005rem;
+}
+
+.Agent {
+    color: #FFF;
+    font-family: "LatoFont", "Lato";
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.0005rem;
+}
+
+.forth-underline {
+    width: 14rem;
+    height: 0.125rem;
+    flex-shrink: 0;
+    opacity: 0.2005;
+    background: #FFF;
+
+    margin: 0 2.75rem;
+}
+
+.wp-pusher {
+    width: 14.1875rem;
+    margin-left: 2.88rem;
+    color: #FFF;
+    font-family: "LatoFont", "Lato";
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: -0.00056rem;
+    margin-top: 2.69rem;
+    margin-bottom: 1.06rem;
+}
+
+.WP {
+    color: #FFF;
+    font-family: "LatoFont", "Lato";
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.5rem;
+    letter-spacing: -0.00056rem;
+}
+
+.Kirk-Beard {
+    display: flex;
+    margin-left: 2.88rem;
+}
+
+.Kirk-Beard img {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.Beard {
+    margin-top: 0.62rem;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.0005rem;
+    margin-left: 0.88rem;
+}
